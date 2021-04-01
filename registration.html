@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Регистрация</title>
+	<link rel="stylesheet" type="text/css" href="css/regs.css">
+</head>
+<body>
+	<div class="signup-form">
+      <form action="#" method="POST" >
+        <h1>Регистрация</h1>
+        <input type="text" placeholder="Имя" id="UserName" required name="UserName">
+        <input type="text" placeholder="Никнейм" id="NickName"  required name="NickName">
+        <input type="email" placeholder="Почта" id="email"  required name="email">
+        <input type="password" placeholder="Пароль"  id="passw1" required name="pass">
+        <input type="password" placeholder="Повторите пароль" id="passw2" required>
+        <br>
+        <input type="checkbox" id="passw_check" name="passw_check" onchange="passwCheck()">
+        <label for="passw_check" id="passCheckLabel">Показать пароль</label>
+        <br>
+        <input type="submit" value="Создать аккаунт" class="signup-btn">
+        <p><a href="signIn.html" >Уже зарегистрированы?</a></p>
+      </form>
+      <div id="errBlock">
+      	<p id="errText"></p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/FormValidation.js"></script>
+</body>
+</html>

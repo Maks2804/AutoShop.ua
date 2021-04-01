@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+#authorization{
+	height: 100%;
+	min-width: 100%;
+	z-index: 2;
+	position: fixed;
+	background-color: rgba(0,0,0,.8);
+	visibility: hidden;
+}
+.authorization-container{
+	height: 300px;
+	width: 800px;
+	background-color: #fff;
+	margin: 100px auto;
+	border-radius: 20px
+}
+.Sign-in{
+	width: 40%;
+	height: 95%;
+	margin-top: 10px;
+	float: left;
+	margin-left: 30px;
+	transition: .8s;
+	cursor: pointer;
+}
+.Register-now{
+	width: 40%;
+	height: 95%;
+	margin-top: 10px;
+	float: right;
+	margin-right:  10px;
+	transition: .8s;
+	cursor: pointer;
+}
+.Sign-in:hover, .Register-now:hover{
+	background-color: rgb(249.09, 115.42, 67.105)
+}
+.Register-now p,.Sign-in p{
+	text-align: center;
+	font-size: 26px;
+	color: #000;
+	font-family: 'Inconsolata', monospace;
+	margin-top: 130px;
+}
+.Register-now p a,.Sign-in p a{
+	text-decoration: none;
+	color: #000;
+	font-size: 26px;
+}
+.Register-now p a:hover,.Sign-in p a:hover{
+	text-decoration: underline;
+}

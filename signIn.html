@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Войти в аккаунт</title>
+	<link rel="stylesheet" type="text/css" href="css/signIn.css">
+</head>
+<body>
+	<form action="#" class="box" method="POST">
+		<h1>Вход</h1>
+		<input type="text" name="user_name" placeholder="Имя пользователя или эмейл" required>
+		<input type="password" name="password" placeholder="Пароль" id="pass" required>
+		<input type="checkbox" onchange="change_fun()" id="check" name="check">
+		<label id="check_label" for="check">Показать пароль</label>
+		<input type="submit" value="Войти">
+		<a href="registration.html">Уже зарегистрированы ?</a>
+
+	</form>
+	<script type="text/javascript">
+		function change_fun() {
+			let check = document.getElementById('check');
+			let label = document.getElementById('check_label');
+			let pass = document.getElementById('pass');
+			
+			if (check.checked) {
+				pass.setAttribute("type", "text")
+				label.innerHTML = "Cкрыть пароль"
+			}
+			else{
+				pass.setAttribute("type", "password")
+				label.innerHTML = "Показать пароль"
+			}
+		}
+	</script>
+</body>
+</html>

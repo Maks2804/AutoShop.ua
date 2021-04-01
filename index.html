@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="css/Style.css">
+	<link rel="stylesheet" type="text/css" href="css/styleAuthorization.css">
+	
+	<title>Онлайн Авто Магазин</title>
+</head>
+<body>
+	<div class="left-menu">
+		<p style="text-align: right;font-size: 23px;cursor: pointer;" onclick="menuClose()">&#10060;</p>
+		<div class="el-menu" onclick="open_AutrMenu()">
+			<p>Авторизация</p>
+		</div>
+		<div class="el-menu">
+			<p>Наши офисы</p>
+		</div>
+		<div class="el-menu">
+			<p>Продать машину</p>
+		</div>
+		<div class="el-menu">
+			<p>Есть предложения ?</p>
+		</div>
+		<div class="el-menu">
+			<p>Разработчику</p>
+		</div>
+	</div>
+
+	<div class="authorization" id="authorization">
+		<div class="authorization-container">
+			<p style="float: right;font-size: 23px;cursor: pointer;position: relative;margin-left: 5px;margin-top: 5px;" onclick="close_AutrMenu()">&#10060;</p>
+			<div class="Sign-in">
+				<p><a href="signIn.html" target="_blank">Войти</a></p>
+			</div>
+			<div class="Register-now">
+				<p><a href="registration.html" target="_blank">Зарегистрироваться</a></p>
+			</div>
+				<script type="text/javascript">
+					function open_AutrMenu() {
+					let menu = document.getElementById('authorization');
+					menu.style.visibility = "visible";
+						}
+					function close_AutrMenu() {
+					let menu = document.getElementById('authorization');
+					menu.style.visibility = "hidden";
+						}
+				</script>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<div class="wrapp-container">
+			<div class="header">
+				<div class="logo">
+			<div class="left-menu-button">
+				<p onclick="menuShow()">☰</p>
+			</div>
+
+			<div class="logo-container">
+				<p><img src="img/logo.jpg" alt=""></p>
+			</div>
+
+			<div class="contact">
+				<p class="contact-text" title="Контактный номер">&#9990; 088-888-888</p>
+			</div>
+
+			
+		</div>
+				<div class="top-menu">
+					<div class="top-menu-container">
+						<div id="element-menu1" onmouseleave="MouseLeave1()" onmousemove="MouseMove1()"><p id="el-text1">Наши предложения</p></div>
+						<div id="element-menu2" onmouseleave="MouseLeave2()" onmousemove="MouseMove2()"><p id="el-text2">Новинки</p></div>
+						<div id="element-menu3" onmouseleave="MouseLeave3()" onmousemove="MouseMove3()"><p id="el-text3">Сервис</p></div>
+						<div id="element-menu4" onmouseleave="MouseLeave4()" onmousemove="MouseMove4()"><p id="el-text4">О нас</p></div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<!-- Блок 'slider' под контролем Vue -->
+				<div class="slider">
+					<div class="previous-slide" onclick="prevSlide()">&#9668;</div>
+					<div class="next-slide" onclick="nextSlide()">&#9658;</div>
+					<div class="slide" v-if="slideCount == 0">
+						<h2 class="slider-header">Chevrolet Cruze 2018</h2>
+						<p class="slider-price">от 10 500 $</p>
+						<button>К заказу</button>
+						<p><img src="https://mr-chip.ru/wp-content/uploads/Chevrolet-Cruze.png" alt="" width="100%"></p>
+					</div>
+					<div class="slide" v-else-if="slideCount == 1">
+						<h2 class="slider-header">Audi A6 2018</h2>
+						<p class="slider-price">от 22 700 $</p>
+						<button>К заказу</button>
+						<p><img src="https://s.auto.drom.ru/i24228/m/bull_image_stub/default_bd22180377fd0278aa2efaad1918094b.jpg" alt="" width="100%"></p>
+					</div>
+					<div class="slide" v-else-if="slideCount == 2">
+						<h2 class="slider-header">BMW M5</h2>
+						<p class="slider-price">от 100 000 $</p>
+						<button>К заказу</button>
+						<p><img src="https://s.auto.drom.ru/photo/d8k1rMfH1c1IrDpwcWKlFdzYW9Xe9DBvSmpG5I-HX3HNwkp8r51CwZeyyMp7G1jtzhNdcH0TRWbPaGcsV_-u_W9HvPoqLBdUHWg7LJyNBdlOCQwds1k.jpg" alt="" width="100%"></p>
+					</div>
+					<div class="slide" v-else>
+						<div class="blockInfo">
+							<h1>Слайды закончились, листайте обратно :)</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="footer-contact">
+					<p>По вопросам сотрудничества - присылайте ваши предложения на AutoShop.ua@gmail.com</p>
+				</div>
+				<div class="footer-info">
+					<p>По вопросам покупки авто, запчастей, сервисного обслуживания, стоимости и поставок - обращайтесь в автоцентр {Имя}</p>
+				</div>
+				<div class="social-networks">
+					<div class="social-icon1">
+						<a href="#"><img src="https://avatanplus.com/files/resources/original/586cd0b6dd3eb159690f4a7a.png" alt="" width="85%"></a>
+					</div>
+					<div class="social-icon2">
+						<a href="#"><img src="https://pngicon.ru/file/uploads/youtube-1.png" alt="" width="85%"></a>
+					</div>
+					<div class="social-icon3">
+						<a href="#"><img src="https://pngicon.ru/file/uploads/telegram.png" alt="" width="85%"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
